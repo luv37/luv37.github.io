@@ -6,24 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hello World | Hexo</title>
+  <title>PAT_A1053 | 解忧杂货铺</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="题目  思路　　使用树的dfs和回说剪枝来实现统计要求的路径。其中为了输出路径时按照规则从大到小，对每个结点的孩子都按照权重从大到小排列。也可以把每个符合要求的路径保存，并按照要求排序，最后统一输出。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2020/10/27/hello-world/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:title" content="PAT_A1053">
+<meta property="og:url" content="http://example.com/2020/10/28/pat/index.html">
+<meta property="og:site_name" content="解忧杂货铺">
+<meta property="og:description" content="题目  思路　　使用树的dfs和回说剪枝来实现统计要求的路径。其中为了输出路径时按照规则从大到小，对每个结点的孩子都按照权重从大到小排列。也可以把每个符合要求的路径保存，并按照要求排序，最后统一输出。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-27T11:50:06.085Z">
-<meta property="article:modified_time" content="2020-10-27T11:50:06.085Z">
-<meta property="article:author" content="John Doe">
+<meta property="og:image" content="http://example.com/2020/10/28/img/pat1053.png">
+<meta property="article:published_time" content="2020-10-28T03:15:45.000Z">
+<meta property="article:modified_time" content="2020-10-28T03:19:21.565Z">
+<meta property="article:author" content="码没了妈">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/10/28/img/pat1053.png">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="解忧杂货铺" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/avatar.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -47,7 +49,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -105,7 +107,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -154,39 +156,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-pat" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      PAT_A1053
     </h1>
   
 
         
-        <a href="/2020/10/27/hello-world/" class="archive-article-date">
-  	<time datetime="2020-10-27T11:50:06.085Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-27</time>
+        <a href="/2020/10/28/pat/" class="archive-article-date">
+  	<time datetime="2020-10-28T03:15:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><img src="../img/pat1053.png">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>　　使用树的dfs和回说剪枝来实现统计要求的路径。其中为了输出路径时按照规则从大到小，对每个结点的孩子都按照权重从大到小排列。也可以把每个符合要求的路径保存，并按照要求排序，最后统一输出。</p>
+<a id="more"></a>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct node&#123;                                &#x2F;&#x2F;使用结构体存放结点 </span><br><span class="line">    int weight;                             &#x2F;&#x2F;权值 </span><br><span class="line">    vector&lt;int&gt; child;                      &#x2F;&#x2F;孩子结点使用数组表示 </span><br><span class="line">&#125;Node[105];                                 &#x2F;&#x2F;存放所有的结点，最多100个结点 </span><br><span class="line">int n,m,s;</span><br><span class="line">vector&lt;int&gt; path;                           &#x2F;&#x2F;存放路径 </span><br><span class="line"></span><br><span class="line">bool cmp(int a,int b)&#123;                      &#x2F;&#x2F;将孩子每一层按照权值从大到小排序，这样dfs的结果才能满足路径权值从大到小 </span><br><span class="line">    return Node[a].weight&gt;Node[b].weight;</span><br><span class="line">&#125;                                           &#x2F;&#x2F;（也可以将所有的路径保存后排序输出 ） </span><br><span class="line">void DFS(int index,int sum);            </span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;s);</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;Node[i].weight);</span><br><span class="line">    int id,k,child;</span><br><span class="line">    for(int i&#x3D;0;i&lt;m;i++)&#123;</span><br><span class="line">        scanf(&quot;%d%d&quot;,&amp;id,&amp;k);</span><br><span class="line">        for(int j&#x3D;0;j&lt;k;j++)&#123;</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;child);</span><br><span class="line">            Node[id].child.push_back(child);</span><br><span class="line">        &#125;</span><br><span class="line">        sort(Node[id].child.begin(),Node[id].child.end(),cmp);  &#x2F;&#x2F;孩子读取完即排序 </span><br><span class="line">    &#125;</span><br><span class="line">    path.push_back(0);</span><br><span class="line">    DFS(0,Node[0].weight); </span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125; </span><br><span class="line">void DFS(int index,int sum)</span><br><span class="line">&#123;</span><br><span class="line">    if(sum&gt;s) return;                           &#x2F;&#x2F;如果路径上的和大于s，不满足规则，返回 </span><br><span class="line">    else if(sum&#x3D;&#x3D;s)&#123;</span><br><span class="line">        if(Node[index].child.size()!&#x3D;0) return;&#x2F;&#x2F;说明该结点不是叶子结点，不满足题目要求，直接返回，否则输出路径</span><br><span class="line">        else&#123;</span><br><span class="line">            for(int i&#x3D;0;i&lt;path.size();i++)&#123;</span><br><span class="line">                if(i) putchar(&#39; &#39;);</span><br><span class="line">                printf(&quot;%d&quot;,Node[path[i]].weight);</span><br><span class="line">            &#125;</span><br><span class="line">            putchar(&#39;\n&#39;);</span><br><span class="line">            return;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;                                       &#x2F;&#x2F;否则对其所有孩子递归dfs </span><br><span class="line">        for(int i&#x3D;0;i&lt;Node[index].child.size();i++)&#123;</span><br><span class="line">            int child&#x3D;Node[index].child[i];</span><br><span class="line">            path.push_back(child);              &#x2F;&#x2F;当前结点算入路径 </span><br><span class="line">            DFS(child,sum+Node[child].weight);  &#x2F;&#x2F;当前孩子的递归dfs结束后，要从路径中删除，以继续进行下一个孩子的dfs </span><br><span class="line">            path.pop_back();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+
+
+
 
       
 
@@ -203,6 +204,11 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -266,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/10/27/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/10/28/pat/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,15 +286,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/10/27/%E5%B0%8F%E5%BC%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          小张的第一篇blog
-        
-      </div>
-    </a>
   
+    <a href="/2020/10/27/%E5%B0%8F%E5%BC%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小张的第一篇blog</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -329,7 +331,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 John Doe
+    		&copy; 2020 码没了妈
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
